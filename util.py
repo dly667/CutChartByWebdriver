@@ -3,7 +3,7 @@ import time
  
 from PIL import Image
  
-def fullpage_screenshot(driver, file):
+def fullpage_screenshot(driver, file, dir):
  
         print("Starting chrome full page screenshot workaround ...")
  
@@ -64,6 +64,6 @@ def fullpage_screenshot(driver, file):
             part = part + 1
             previous = rectangle
  
-        stitched_image.save(file,quality = 95)
+        stitched_image.save("output/"+dir+"/"+file,quality = 95)
         print("Finishing chrome full page screenshot workaround...")
         return True
